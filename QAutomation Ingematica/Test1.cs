@@ -53,8 +53,7 @@ namespace QAutomation_Ingematica
                     Console.WriteLine("El producto se encuentra disponible");
                 }else if (disponibilidad is null)
                 {
-                    var opcionesDeCompra = F.BuscarPorXPath("//span[normalize-space()='Ver opciones de compra']", driver);
-                    opcionesDeCompra.Click();
+                    F.BuscarPorXPath("//span[normalize-space()='Ver opciones de compra']", driver).Click();
                     disponibilidad = F.BuscarPorXPath("//span[normalize-space()='Comprar ahora']", driver);
                     if (disponibilidad != null)
                     {
