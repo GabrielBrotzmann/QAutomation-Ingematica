@@ -29,24 +29,19 @@ namespace QAutomation_Ingematica
             driver.Url = "https://www.mercadolibre.com.ar";
 
             //AceptarCookies
-            var cookie = F.BuscarPorXPath("//button[normalize-space()='Aceptar cookies']", driver);
-            cookie.Click();
-
+            F.BuscarPorXPath("//button[normalize-space()='Aceptar cookies']", driver).Click();
+            
             //Buscador
-            var input = F.BuscarPorXPath("//input[@id='cb1-edit']", driver);
-            input.SendKeys("Smartphone");
+            F.BuscarPorXPath("//input[@id='cb1-edit']", driver).SendKeys("Smartphone");
 
             //ClickeaBuscador
-            var searchBtn = F.BuscarPorXPath("//div[@aria-label='Buscar']", driver);
-            searchBtn.Click();
+            F.BuscarPorXPath("//div[@aria-label='Buscar']", driver).Click();
 
             //ClickeaSiguientePagina
-            var sigPag = F.BuscarPorXPath("//span[@class='andes-pagination__arrow-title']", driver);
-            sigPag.Click();
+            F.BuscarPorXPath("//span[@class='andes-pagination__arrow-title']", driver).Click();
             
             //ClickTercerItem
-            var item = F.BuscarPorXPath("/html[1]/body[1]/main[1]/div[1]/div[2]/section[1]/ol[1]/li[3]/div[*]/div[1]/div[2]/div[*]/a[1]/h2[1]", driver);
-            item.Click();
+            F.BuscarPorXPath("/html[1]/body[1]/main[1]/div[1]/div[2]/section[1]/ol[1]/li[3]/div[*]/div[1]/div[2]/div[*]/a[1]/h2[1]", driver).Click();
 
             /*BuscarBotonCompra (Busca el boton de compra, si esta disponible, entonces tambien el producto, si hay distintas
             opciones de compra, clickea y busca el boton nuevamente */
