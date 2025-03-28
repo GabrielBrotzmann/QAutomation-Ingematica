@@ -51,7 +51,7 @@ namespace QAutomation_Ingematica.StepDefinitions
         [Then(@"El ítem está habilitado para comprar")]
         public void ThenElItemEstaHabilitadoParaComprar()
         {
-            Assert.True(_busqueda.VerificarDisponibilidad());
+            Assert.That(_busqueda.VerificarDisponibilidad());
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.DevTools.V117.DOM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +12,6 @@ namespace QAutomation_Ingematica.POM
     {
         private IWebDriver _driver;
 
-        public MeLiHomePage() { }
         public MeLiHomePage(IWebDriver driver)
         {
             _driver = driver;
